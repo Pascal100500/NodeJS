@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ===Сам шар с окошком ответов=== */
+.ball {
+  width: 260px;
+  height: 260px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);*/
+
+  box-shadow:
+    inset -10px -10px 20px rgba(0,0,0,0.8),
+    inset 10px 10px 20px rgba(255,255,255,0.1),
+    0 10px 30px rgba(34, 33, 33, 0.5);
+}
+
+.answer-window {
+  width: 130px;
+  height: 130px;
+  background: #1d4ed8;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/*Кнопка*/
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* === Анимация тряски (стандартный вариант шара) === */ 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+.answer-window p {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* текст пояляется с анимамацией появления*/
+.answer-text {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  transition: all 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-30px) scale(0.7);
+  filter: blur(4px);
+}
+
+/* контейнер для кнопок на стартовой страницы, просто задать отступ между ними*/
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 15px;
+}
+
