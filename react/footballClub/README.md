@@ -1,16 +1,19 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Практика 6
 
-Currently, two official plugins are available:
+Создайте приложение для отображения информации о
+футбольном клубе. Для отображения информации нужно
+использовать классовые компоненты. Первый компонент
+должен отображать краткую информацию о клубе: название клуба, город, дата основания клуба, герб клуба и
+т.д. Второй компонент должен отображать информацию
+о достижениях клуба: медали, кубки, забитые голы и т.д.
+Третий компонент должен отображать информацию о
+текущем составе команды. Количество компонент зависит только от вашей фантазии при реализации проекта
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Настройте компонент из первого задания с помощью
+стилей. Набор стилей выбирается каждый раз случайно.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Расширьте первое задание таким образом, чтобы
+можно было показывать информацию о нескольких футбольных клубах. Информация о клубах поступает из
+массива объектов.
